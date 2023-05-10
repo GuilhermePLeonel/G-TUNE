@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Carregando from './Carregando';
 import './styles/Login.css';
 import { createUser } from '../services/userAPI';
@@ -63,7 +63,7 @@ class Login extends React.Component {
         clicked,
       } = this.state;
       if (clicked === true) {
-        return <Navigate to="/search" />;
+        return <Redirect to="/search" />;
       }
       if (clicked === false) {
         return <div className= 'carreg'><Carregando/></div>;
