@@ -1,0 +1,76 @@
+.page-search {
+  background-color: #FFFFFF;
+  color: #333333;
+  padding: 2%;
+  text-align: center;
+  box-shadow:
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  width: 50%;
+  min-height: 200px;
+  margin: 100px auto;
+  background: white;
+  border-radius: 5px;
+}
+
+.page-search p {
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.page-search form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.page-search input {
+  border: 1px solid #6A5ACD;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  width:40%;
+}
+
+.page-search button {
+  background-color: #6A5ACD;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.page-search button:hover {
+  background-color: #C791C7;
+}
+
+.page-search img {
+  display: block;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+.page-search a {
+  color: #6A5ACD;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.albuns-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
+
+.album{
+  margin:10px;
+  width: 20%;
+}

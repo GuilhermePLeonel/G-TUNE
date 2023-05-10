@@ -1,0 +1,35 @@
+
+.header-component {
+
+  box-shadow:
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 1rem;
+}
+
+#titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.header-component a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.header-component a:hover {
+  text-decoration: underline;
+}

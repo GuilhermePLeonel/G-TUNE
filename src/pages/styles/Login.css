@@ -1,0 +1,87 @@
+body{
+ background-color: #6A5ACD;
+}
+
+#nome {
+  margin-bottom: 10px;
+}
+
+.titulo{
+  font-size: 170%;
+  color: #878787;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.page-login {
+  text-align: center;
+  box-shadow:
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+
+  padding: 2%;
+  min-height: 200px;
+  width: 30%;
+  margin: 100px auto;
+  background: white;
+  border-radius: 5px;
+
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #878787;
+}
+
+button[type="button"] {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: none;
+  background-color: #C791C7;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="button"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.c-loader {
+  animation: is-rotating 1s infinite;
+  text-align: center;
+  border: 6px solid #00001000;
+  opacity: 50%;
+  border-radius: 50%;
+  border-top-color: #C791C7;
+  height: 30px;
+  width: 30px;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.carreg{
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  
+}
