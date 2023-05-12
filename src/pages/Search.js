@@ -55,82 +55,80 @@ class Search extends React.Component {
       disabledState,
       clicked,
       searchObject,
-      artista,
+      // artista,
     } = this.state;
 
     const link = '/album/';
     return (
       <div>
-      <Header />
-      <div data-testid="page-search"
-      className="page-search">
-        { clicked ? <Carregando /> : (
+        <Header />
+        <div data-testid="page-search"
+          className="page-search">
+          {clicked ? <Carregando /> : (
 
-          <form>
-            <label htmlFor="search">
-              <input
-                name="bandName"
-                onChange={ this.handleChange }
-                value={ bandName }
-                id="bandName"
-                placeholder='digite o que quer escutar...'
-                data-testid="search-artist-input"
-                type="text"
-              />
-              <button
-                data-testid="search-artist-button"
-                type="button"
-                disabled={ disabledState }
-                onClick={ this.onClickSearch }
-              >
-                Pesquisar
-              </button>
-            </label>
-          </form>
-        ) }
-
-        <div>
-          {
-            searchObject.length === 0 && bandName.length > 0 ? (
-              <div>
-                <p>
-                  { `Resultado de álbuns de: ${artista}` }
-                </p>
-              </div>)
-              : (
-                <p>
-                  { `Resultado de álbuns de: ${artista}` }
-                </p>
-              )
-          }
-        </div>
-        <div className='albuns-list'>
-
-          {searchObject.length > 0 ? (
-            searchObject.map((artist) => (
-
-              <div 
-              className='album'
-              key={ artist.artistName }>
-                <p>
-                  { artist.collectionName }
-                </p>
-                <Link
-                  to={ {
-                    pathname:link + artist.collectionId,
-                    state: artist.collectionId
-                  } }
-                  
-                  data-testid={ `link-to-album-${artist.collectionId}` }
+            <form>
+              <label htmlFor="search">
+                <input
+                  name="bandName"
+                  onChange={this.handleChange}
+                  value={bandName}
+                  id="bandName"
+                  placeholder='digite o que quer escutar...'
+                  data-testid="search-artist-input"
+                  type="text"
+                />
+                <button
+                  data-testid="search-artist-button"
+                  type="button"
+                  disabled={disabledState}
+                  onClick={this.onClickSearch}
                 >
-                  <img src={ artist.artworkUrl100 } alt="foto" 
-                  />
-                </Link>
-              </div>
-
-            ))) : <p>Nenhum álbum foi encontrado</p>}
+                  Pesquisar
+                </button>
+              </label>
+            </form>
+          )}
+          {/* <div>
+            {
+              searchObject.length === 0 && bandName.length > 0 ? (
+                <div>
+                  <p>
+                    {`Resultado de álbuns de: ${artista}`}
+                  </p>
+                </div>)
+                : (
+                  <p>
+                    {`Resultado de álbuns de: ${artista}`}
+                  </p>
+                )
+            }
+          </div> */}
+          {clicked === false ? (
+            <div className='albuns-list'>
+              {searchObject.length > 0 ? (
+                searchObject.map((artist) => (
+                  <Link
+                    to={{
+                      pathname: link + artist.collectionId,
+                      state: artist.collectionId
+                    }}
+                    data-testid={`link-to-album-${artist.collectionId}`}
+                  >
+                    <div
+                      className='album'
+                      key={artist.artistName}>
+                      <p
+                        className='album-name'
+                      >
+                        {artist.collectionName}
+                      </p>
+                      <img src={artist.artworkUrl100} alt="foto" />
+                    </div>
+                  </Link>
+                ))) : <p>NENHUM ALBUM FOI ENCONTRADO NA SUA BUSCA, TENTE OUTRO NOME OU MELHORE SEU GOSTO MUSICAL!</p>}
+            </div>
+          ) : <p>Pesquise aqui o seu maior ídolo, aquele artista especial que marcou os maiores momentos da sua vida </p>}
         </div>
-      </div>
       </div>
     );
   }

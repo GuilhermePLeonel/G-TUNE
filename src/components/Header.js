@@ -22,13 +22,15 @@ class Header extends React.Component {
 
     return (
       <header data-testid="header-component"
-      className= "header-component">
-        <p 
-          id= "titulo"
+        className="header-component">
+        <Link to="/" >
+          <p
+            id="titulo"
           >G Tunes </p>
-          {
+        </Link>
+        {
           isLoading ? <Carregando /> : (
-            <p data-testid="header-user-name">{ "usuario: " + result.name }</p>
+            <p data-testid="header-user-name">{"usuario: " + result.name}</p>
           )
         }
         <Link to="/search" data-testid="link-to-search">Search</Link>
