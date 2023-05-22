@@ -1,38 +1,40 @@
-import React from 'react';
-import propTypes from 'prop-types';
-import { addSong, removeSong } from '../services/favoriteSongsAPI';
-import Carregando from '../pages/Carregando';
+import React from "react";
+import propTypes from "prop-types";
+import { addSong, removeSong } from "../services/favoriteSongsAPI";
+import Carregando from "../pages/Carregando";
+import "./styles/MusicCard.css";
 
 class MusicCard extends React.Component {
   state = {
     status: undefined,
     awaitingList: undefined,
-  }
+  };
 
   onClick = async ({ target }) => {
     const { albumObject, getSongs } = this.props;
-    const favSong = albumObject.filter((song) => song.trackName === target.name);
-    if(target.checked === false){
+    const favSong = albumObject.filter(
+      (song) => song.trackName === target.name
+    );
+    if (target.checked === false) {
       this.setState({
         status: true,
       });
-      await removeSong(favSong[0])
+      await removeSong(favSong[0]);
       await getSongs();
       this.setState({
         status: false,
       });
-    }  
-    else {
+    } else {
       this.setState({
-      status: true,
-    });
-    await addSong(favSong[0]);
-    await getSongs();
-    this.setState({
-      status: false,
-    });
-    } 
-  }
+        status: true,
+      });
+      await addSong(favSong[0]);
+      await getSongs();
+      this.setState({
+        status: false,
+      });
+    }
+  };
 
   render() {
     const { albumObject, favorites } = this.props;
@@ -44,40 +46,31 @@ class MusicCard extends React.Component {
           {status ? <Carregando /> : null}
 
           <div>
-            {
-              albumObject.filter((song) => song.trackId).map((album) => (
-                <div key={ album.collectionName }>
-                  <p>
-                    {album.trackName}
-                  </p>
+            {albumObject
+              .filter((song) => song.trackId)
+              .map((album) => (
+                <div className="card" key={album.collectionName}>
+                  <p>{album.trackName}</p>
                   <audio
                     data-testid="audio-component"
-                    src={ album.previewUrl }
+                    src={album.previewUrl}
                     controls
                   >
-                    <track kind="captions" />
-                    O seu navegador não suporta o elemento
-                    {' '}
-                    <code>audio</code>
-                    .
+                    <track kind="captions" />O seu navegador não suporta o
+                    elemento <code>audio</code>.
                   </audio>
-                  <label htmlFor="checkbox">
-                    Favorita
-                    <input
-                      id="checkbox"
-                      name={ album.trackName }
-                      type="checkbox"
-                      onClick={ this.onClick }
-                      checked={
-                        favorites.some((song) => song.trackId === album.trackId)
-                      }
-                      data-testid={ `checkbox-music-${album.trackId}` }
-                    />
-                  </label>
-
+                  <input
+                    id="checkbox"
+                    name={album.trackName}
+                    type="checkbox"
+                    onClick={this.onClick}
+                    checked={favorites.some(
+                      (song) => song.trackId === album.trackId
+                    )}
+                    data-testid={`checkbox-music-${album.trackId}`}
+                  />
                 </div>
-              ))
-            }
+              ))}
           </div>
         </div>
       </div>
