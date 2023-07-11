@@ -28,9 +28,16 @@ class Header extends React.Component {
         {isLoading ? (
           <Carregando />
         ) : (
-          <p id="user" data-testid="header-user-name">
-            {"usuario: " + result.name}
-          </p>
+          <div>
+            <p id="user" data-testid="header-user-name">
+              <img
+                id="user-icon"
+                alt="user icon"
+                src="https://cdn.icon-icons.com/icons2/827/PNG/512/user_icon-icons.com_66546.png"
+              />
+              {result.name}
+            </p>
+          </div>
         )}
         <div className="links">
           <Link to="/search" data-testid="link-to-search">
