@@ -32,6 +32,7 @@ As tecnologias utilizadas no desenvolvimento do G-tunes incluem:
 - JavaScript
 - React
 - CSS
+- Redux
 - API (para obter dados dos artistas, álbuns e músicas)
 
 ## Instruções de Uso
