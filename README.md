@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# G-tunes - Plataforma de Música Online 🎵
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o Projeto
 
-## Available Scripts
+O G-tunes é uma plataforma de música online inspirada no iTunes, desenvolvida com o objetivo de proporcionar uma experiência única de escuta de músicas e descoberta de novos artistas. Além de codificar a aplicação, o projeto também enfatiza o trabalho em equipe, aprendizado e diversão!
 
-In the project directory, you can run:
+A ideia por trás do G-tunes surgiu da necessidade de oferecer uma plataforma moderna e prática para o consumo de música, proporcionando aos usuários acesso a um vasto catálogo de artistas, álbuns e músicas.
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O G-tunes conta com várias funcionalidades para tornar a experiência de música online agradável e interativa:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Pesquisa de Músicas: Os usuários podem pesquisar suas músicas favoritas por título, artista ou álbum.
+- Reprodução de Músicas: Com o G-tunes, é possível reproduzir as músicas diretamente no navegador.
+- Playlists Personalizadas: Os usuários podem criar suas próprias playlists com suas músicas preferidas.
+- Descoberta de Novos Artistas: O G-tunes oferece uma seção de destaques com artistas em ascensão e novos lançamentos.
+- Integração com API: O aplicativo se conecta a uma API para obter os dados dos artistas, álbuns e músicas.
 
-### `npm test`
+## Desenvolvimento e Equipe
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O projeto G-tunes foi desenvolvido por um time de pessoas entusiasmadas por música e tecnologia:
 
-### `npm run build`
+- Eu (seu nome): Responsável pelo desenvolvimento front-end utilizando React, JavaScript e CSS.
+- (Nome da pessoa 2): Responsável pelo desenvolvimento back-end, incluindo a criação da API para fornecer os dados da plataforma.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O trabalho em equipe foi fundamental para a criação da plataforma, pois cada membro contribuiu com suas habilidades e conhecimentos para oferecer a melhor experiência possível aos usuários.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Stacks Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As tecnologias utilizadas no desenvolvimento do G-tunes incluem:
 
-### `npm run eject`
+- JavaScript
+- React
+- CSS
+- API (para obter dados dos artistas, álbuns e músicas)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Instruções de Uso
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para utilizar o G-tunes, siga as instruções abaixo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone este repositório.
+2. Navegue para a pasta do front-end e execute `npm install` para instalar as dependências.
+3. Inicie o aplicativo front-end com `npm start`.
+4. O aplicativo abrirá automaticamente no seu navegador, e você poderá explorar as funcionalidades para ouvir suas músicas favoritas.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Divirta-se com o G-tunes e aproveite a experiência de música online! 🎵
